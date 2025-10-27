@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JLN-Ob-E7i">
+                                <rect key="frame" x="50" y="268" width="275" height="60.5"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Riso_white" translatesAutoresizingMaskIntoConstraints="NO" id="bS3-vt-ery">
+                                        <rect key="frame" x="85" y="0.0" width="104" height="35"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ncN-9z-vI7">
+                                        <rect key="frame" x="0.0" y="40" width="275" height="20.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Richtig So.">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999000000000005" green="0.99999000000000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="17" name="SFUIText-Semibold"/>
+                                                    <real key="NSKern" value="-0.45000000000000001"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="ncN-9z-vI7" secondAttribute="trailing" id="fAk-pT-SY1"/>
+                                    <constraint firstAttribute="bottom" secondItem="ncN-9z-vI7" secondAttribute="bottom" id="lGU-gK-uiX"/>
+                                    <constraint firstItem="bS3-vt-ery" firstAttribute="centerX" secondItem="JLN-Ob-E7i" secondAttribute="centerX" id="lN9-uI-y8f"/>
+                                    <constraint firstItem="ncN-9z-vI7" firstAttribute="top" secondItem="bS3-vt-ery" secondAttribute="bottom" constant="5" id="q2J-Bo-X7A"/>
+                                    <constraint firstItem="ncN-9z-vI7" firstAttribute="leading" secondItem="JLN-Ob-E7i" secondAttribute="leading" id="rF8-3u-72N"/>
+                                    <constraint firstItem="bS3-vt-ery" firstAttribute="top" secondItem="JLN-Ob-E7i" secondAttribute="top" id="rUg-B8-jpL"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.058823529411764705" green="0.25882352941176467" blue="0.62352941176470589" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JLN-Ob-E7i" secondAttribute="trailing" constant="50" id="hhq-rT-1jG"/>
+                            <constraint firstItem="JLN-Ob-E7i" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="centerY" constant="-15" id="iSA-2q-DBH"/>
+                            <constraint firstItem="JLN-Ob-E7i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="pEF-VF-U4l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Riso_white" width="104" height="35"/>
+    </resources>
+</document>

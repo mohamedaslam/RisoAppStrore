@@ -1,0 +1,143 @@
+/*
+  Localizable.strings
+  business-finance-app-ios
+
+  Created by Razvan Rusu on 19/04/2018.
+  Copyright © 2018 Viable Labs. All rights reserved.
+*/
+
+// #################################################################################################
+// MARK: - General
+// #################################################################################################
+
+"ACCREDITED"        = "ACCREDITED";
+"APPROVED INVOICES" = "APPROVED INVOICES";
+"LEFT"              = "LEFT";
+"Ok"                = "Ok";
+"Next"              = "Next";
+"Upload"            = "Upload";
+"app.version"       = "version %@";
+
+// #################################################################################################
+// MARK: - Tab Bar
+// #################################################################################################
+
+"tab.dashboard" = "Dashboard";
+"tab.invoices"  = "Invoices";
+"tab.benefits"  = "Benefits";
+// #################################################################################################
+// MARK: - NavigationBar
+// #################################################################################################
+
+"navigation.title.dashboard"      = "Übersicht";
+"navigation.title.invoices"       = "Invoices";
+"navigation.title.more"           = "More";
+"navigation.title.auth"           = "Login";
+"navigation.title.forgotPassword" = "Forgot Password?";
+
+// #################################################################################################
+// MARK: - Authentication
+// #################################################################################################
+
+"auth.button.login"              = "Login";
+"auth.button.forgotPassword"     = "Forgot Password?";
+"auth.fieldPlaceholder.email"    = "EMAIL";
+"auth.fieldPlaceholder.password" = "PASSWORD";
+"auth.text.disclaimer"           = "RISO helps you save taxes.\nDon’t have an account?";
+"auth.text.requestDemo"          = "Request a demo.";
+
+// #################################################################################################
+// MARK: - Forgot Password
+// #################################################################################################
+
+"forgotPassword.button.send" = "Send";
+"forgotPassword.text.info"   = "We will send you an email\nwith further instructions to reset\nyour password.";
+"forgotPassword.text.successAlert.title" = "Juhu!";
+"forgotPassword.text.successAlert.text" = "Wir haben Dir eine E-Mail mit dem Passwort-Reset-Link zugeschickt";
+
+// #################################################################################################
+// MARK: - More
+// #################################################################################################
+
+"more.imprint"       = "Imprint";
+"more.privacy"       = "Data Privacy";
+"more.legal"         = "Legal Statement";
+"more.tutorial"      = "Tutorial";
+"more.appSecurity"   = "App Security";
+"more.reminders"     = "Reminders";
+"more.signOut"       = "Sign out";
+"more.clearKeychain" = "[DEV] Clear Keychain";
+
+// #################################################################################################
+// MARK: - Dashboard
+// #################################################################################################
+
+"dashboard.amountLeft" = "AMOUNT LEFT";
+"dashboard.approved-invoices" = "APPROVED INVOICES";
+"dashboard.noDataText" = "Scan your receipt in 3 easy steps";
+// #################################################################################################
+// MARK: - Scan
+// #################################################################################################
+
+"productOverview.invoicesCount" = "Invoices: %@";
+"productOverview.atDisposal"    = " %@ at your disposal";
+"productsOverview.title"        = "Overview";
+"productOverview.emptyText"     = "You have no %@ Receipts\nuploaded yet for %@.\nScan your receipt in 3 easy steps.";
+"invoicesOverview.emptyText"    = "Du hast noch keine %@-Belege hochgeladen im %@.\nScanne jetzt einen Beleg durch Tippen auf das Plus-Zeichen.";
+
+"invoice.pendingcount.one"      = "1 Invoice being checked";
+"invoice.pendingcount.more"     = "%d Invoices being checked";
+
+// #################################################################################################
+// MARK: - Scan
+// #################################################################################################
+
+"scan.multi-scan.headerText" = "You can upload multiple pages for %@ lorem ipsum.";
+"scan.multi-scan.internetClaim" = "Du kannst mehrere Seiten hochladen. Wir benötigen auch Deinen Internet-Vertrag (einmal alle 12 Monate).";
+"scan.photos-taken.one"      = "1 image scanned";
+"scan.photos-taken.other"    = "%@ images scanned";
+"scan.success.titleText"     = "Invoice Uploaded";
+"scan.takePhoto.step"        = "1/3";
+"scan.takePhoto.title"       = "Beleg hinzufügen";
+"scan.takePhoto.camera"      = "Foto jetzt machen";
+"scan.takePhoto.gallery"     = "Foto aus der Galerie auswählen";
+"scan.takePhoto.pdfUpload"   = "PDF Upload";
+"scan.selectProduct.step"    = "2/3";
+"scan.selectProduct.title"   = "Was ist auf dem Beleg?";
+"scan.confirmInvoice.step"   = "3/3";
+"scan.confirmInvoice.title"  = "Confirm Invoice";
+"scan.success.detailsText"   = "Cell description which explains the consequences of the above action.Cell description which";
+"scan.multiScan.buttonText"  = "I scanned all pages";
+"scan.selectProduct.disabledClaim" = "Für diesen Monat hast Du das Maximum schon erreicht. Nächsten Monat steht Dir die Summe erneut zur Verfügung.";
+
+// #################################################################################################
+// MARK: - Tutorial
+// #################################################################################################
+
+"tutorial.welcome" = "Welcome %@";
+"tutorial.skip" = "SKIP";
+
+"tutorial.page0.title"   = "Easy Scan\nyour Receipts";
+"tutorial.page1.title"   = "See Your\nGeneral Status";
+"tutorial.page2.title"   = "Get your invoices\nin one place";
+
+"tutorial.page0.details" = "Cell description which explains the consequences of the above action.Cell description which explains the consequences of the above action.";
+"tutorial.page1.details" = "Cell description which explains the consequences of the above action.Cell description which explains the consequences of the above action.";
+"tutorial.page2.details" = "Cell description which explains the consequences of the above action.Cell description which explains the consequences of the above action.";
+
+// #################################################################################################
+// MARK: - Errors
+// #################################################################################################
+
+"error.invalidEmail"    = "This is not a valid email address!";
+"error.missingEmail"    = "Please enter your email address!";
+"error.missingPassword" = "Please enter your password!";
+"error.default"         = "Something went wrong!\nPlease try again.";
+"error.incorrectCredentials" = "Diese E-Mail-Passwort-Kombination ist uns nicht bekannt. Bitte versuche es nochmal oder nutze den Link \"Passwort vergessen\", um Dir ein neues Passwort zu erstellen.";
+"error.account_inactive" = "Dein Riso-Konto wurde inaktiv gesetzt, wahrscheinlich, da Du nicht mehr für Deinen Arbeitgeber arbeitest. Ist dies nicht korrekt oder hast Du Fragen, dann kontaktiere unser Service-Team (<a href=\"mailto:service@riso-app.de\">service@riso-app.de</a>).";
+
+"something_went_wrong" = "Etwas ist schief gegangen!";
+
+// MARK: -
+"demoRequestEmail.subject" = "Riso-App Demo Konto";
+"demoRequestEmail.body" = "Hallo Riso-Team,\n\nBitte erstellt mir einen Demo-Account für die Riso-App mit dieser E-Mailadresse:\nUnsere Firma heißt:\nund meine Telefonnummer ist:\n\nViele Grüße";
