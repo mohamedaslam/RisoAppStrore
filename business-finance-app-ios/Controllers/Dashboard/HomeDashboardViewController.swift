@@ -2192,18 +2192,35 @@ extension HomeDashboardViewController: UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        if(pickerView == datePickerMonthYear){
-            let date = datePickerMonthYearItems[row]
-            didSelect(date)
-        }else{
-            let year = datePickerYearItems[row]
-            didSelectYear(year)
+        if pickerView == datePicker {
+            guard row >= 0 && row < datePickerYearItems.count else {
+                print("⚠️ Invalid year row index: \(row)")
+                return
+            }
+            selectedYear = datePickerYearItems[row]
+            datePickerYearButton.setTitle(" \(selectedYear) ", for: .normal)
+            reloadData()
+        } else if pickerView == datePickerMonthYear {
+            guard row >= 0 && row < datePickerMonthYearItems.count else {
+                print("⚠️ Invalid month-year row index: \(row)")
+                return
+            }
+            let monthYear = datePickerMonthYearItems[row]
+            currentMonthYear = monthYear
+            datePickerMonthYearButton.setTitle(
+                text(forSelectedMonthYear: (month: monthYear.month, year: monthYear.year)),
+                for: .normal
+            )
+            reloadData()
         }
     }
     
     private func didSelectYear(_ year: Int) {
         self.isYearlySelected = true
-        guard year != selectedYear, year <= Date.currentYear else { return }
+        guard let joinedDate = self.monthlyYearlyOverview?.joined_date else {
+               print("⚠️ joined_date missing; skipping year update.")
+               return
+           }
         self.selectedYear = year
         self.currentMonthYear.year = year
         self.currentMonthYear.month = 12
