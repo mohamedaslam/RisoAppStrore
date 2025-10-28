@@ -968,8 +968,13 @@ class HomeDashboardViewController: BaseViewController,updatePieChartCategoryDele
         self.cashBtn.setTitleColor(UIColor.App.TabBar.selectedState, for: .normal)
         self.vouchersBtn.setTitleColor(UIColor.App.TabBar.defaultState, for: .normal)
         self.deviceBtn.setTitleColor(UIColor.App.TabBar.defaultState, for: .normal)
+        guard let overview = self.monthlyYearlyOverview else {
+            print("⚠️ monthlyYearlyOverview is nil — Cash button tapped too early")
+            self.showErrorToast("Data not ready. Please wait.")
+            return
+        }
             self.getCategory = 1
-            let categoryVC: CategoryVC = CategoryVC(with: self.pages[self.getCategory],isYearSelected: self.isYearlySelected,getIndex: self.getIndex,getMonth:self.currentMonthYear.month,getYear: self.currentMonthYear.year,approvedInvoice: 0,monthlyYearlyOverview: self.monthlyYearlyOverview!)
+            let categoryVC: CategoryVC = CategoryVC(with: self.pages[self.getCategory],isYearSelected: self.isYearlySelected,getIndex: self.getIndex,getMonth:self.currentMonthYear.month,getYear: self.currentMonthYear.year,approvedInvoice: 0,monthlyYearlyOverview: overview)
             categoryVC.delegate = self
             self.categoryPageController?.setViewControllers([categoryVC], direction: .forward, animated: true, completion: nil)
             self.categoryPageController?.didMove(toParent: self)
@@ -1191,7 +1196,9 @@ class HomeDashboardViewController: BaseViewController,updatePieChartCategoryDele
             make.left.equalTo(vouchersBtn.snp_right).offset(1 * AutoSizeScaleX)
             make.width.height.top.equalTo(cashBtn)
         }
-        
+        cashBtn.isEnabled = false
+        vouchersBtn.isEnabled = false
+        deviceBtn.isEnabled = false
         self.categoryPageController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal, options: nil)
         self.categoryPageController?.dataSource = self
         self.categoryPageController?.delegate = self
@@ -1611,6 +1618,10 @@ class HomeDashboardViewController: BaseViewController,updatePieChartCategoryDele
                     
                 }else{
                     self.categoryAll()
+                    self.cashBtn.isEnabled = self.monthlyYearlyOverview != nil
+                    self.vouchersBtn.isEnabled = self.monthlyYearlyOverview != nil
+                    self.deviceBtn.isEnabled = self.monthlyYearlyOverview != nil
+
                 }
                     
                 group.leave()
@@ -1626,6 +1637,10 @@ class HomeDashboardViewController: BaseViewController,updatePieChartCategoryDele
         }
         
         operation.start()
+        self.cashBtn.isEnabled = self.monthlyYearlyOverview != nil
+        self.vouchersBtn.isEnabled = self.monthlyYearlyOverview != nil
+        self.deviceBtn.isEnabled = self.monthlyYearlyOverview != nil
+
     }
     
     private func reloadMonthData() {
